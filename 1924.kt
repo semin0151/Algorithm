@@ -4,12 +4,9 @@ val monthArr = arrayOf(0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
 val dayOfWeekArr = arrayOf("SUN", "MON", "TUE", "WED", "THR", "FRI", "SAT")
 
 fun main() {
-    //val st = StringTokenizer(readLine())
-    //val month = st.nextToken().toInt()
-    //val day = st.nextToken().toInt()
-
-    val month = 12
-    val day = 25
+    val st = StringTokenizer(readLine())
+    val month = st.nextToken().toInt()
+    val day = st.nextToken().toInt()
     
     val totalDay = getTotalDay(month, day)
 

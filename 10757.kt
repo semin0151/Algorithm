@@ -4,8 +4,7 @@ var first = ""
 var second = ""
 
 fun main() {
-    //val st = StringTokenizer(readLine())
-    val st = StringTokenizer("999 999")
+    val st = StringTokenizer(readLine())
 
     first = st.nextToken().reversed()
     second = st.nextToken().reversed()
