@@ -1,6 +1,6 @@
 
 # Int
-## Function
+## Functions
 ### plus
 Add the other value to this value.
 
