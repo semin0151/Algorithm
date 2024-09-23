@@ -1,22 +1,24 @@
 import java.util.*
 
 fun main() {
-    val (k, n) = StringTokenizer(readLine()).run {
+    val (n, m) = StringTokenizer(readLine()).run {
         nextToken().toInt() to nextToken().toInt()
     }
     val arr = mutableListOf<Long>().apply {
-        repeat(k) {
-            add(readLine()?.toLong() ?: 0)
+        val st = StringTokenizer(readLine())
+        repeat(n) {
+            add(st.nextToken().toLong())
         }
     }
 
     var start = 0L
     var end = arr.max()
     var answer = 0L
+
     while(start <= end) {
         val mid = (start + end).div(2)
-        
-        if(getCount(arr, mid) >= n) {
+
+        if(getHeight(arr, mid) >= m) {
             answer = mid
             start = mid.inc()
         } else end = mid.dec()
@@ -25,7 +27,9 @@ fun main() {
     print("$answer")
 }
 
-fun getCount(arr: List<Long>, target: Long): Long {
-    return if(target > 0)arr.sumOf { it.div(target) }
-    else Long.MAX_VALUE
+fun getHeight(arr: List<Long>, target: Long): Long {
+    return arr.map {
+        if(it.minus(target) < 0) 0
+        else it.minus(target)
+    }.sum()
 }

@@ -20,7 +20,5 @@ fun main() {
         }
     }
 
-    print("${dp.joinToString(" ")}\n")
-
     print("${dp.max()}")
 }
