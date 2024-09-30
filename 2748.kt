@@ -12,5 +12,5 @@ fun main() {
         }
     }
 
-    print("${fibo(num)}")
+    print("${fibo(num.toLong())}")
 }
