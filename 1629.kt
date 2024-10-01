@@ -2,14 +2,20 @@ import java.util.*
 
 fun main() {
     val st = StringTokenizer(readLine())
-    val a = st.nextToken().toBigInteger()
-    val b = st.nextToken().toBigInteger()
-    val c = st.nextToken().toBigInteger()
-    var answer = "1".toBigInteger()
-    
-    repeat(b.toInt()) {
-        answer = answer * a
-    }
+    val a = st.nextToken().toLong()
+    val b = st.nextToken().toLong()
+    val c = st.nextToken().toLong()
 
-    print("${answer % c}")
+    print("${recursion(a, b, c).rem(c)}")
+}
+
+fun recursion(a: Long, b: Long, c:Long): Long {
+    return if(b == 0L) 1L
+    else if(b == 1L) a.rem(c)
+    else {
+        val div = recursion(a, b.div(2), c)
+        
+        if(b.rem(2) == 0L) (div * div).rem(c)
+        else ((div * div).rem(c) * a).rem(c)
+    }
 }
