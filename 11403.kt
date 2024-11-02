@@ -36,10 +36,3 @@ fun main() {
 
     print("${check.map { it.joinToString(" ")}.joinToString("\n")}")
 }
-
-/**
- * 3
- * 0 1 0
- * 0 0 1
- * 1 0 0
- */
