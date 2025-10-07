@@ -3,7 +3,7 @@
 - 깊이 우선 탐색
 - stack으로 주로 구현(재귀)
 
-```
+```kotlin
 val arr: Array<IntArray>
 val check: Array<BooleanArray>
 val dy = listOf(1,-1,0,0)
