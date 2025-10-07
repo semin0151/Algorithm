@@ -3,7 +3,7 @@
 - 너비 우선 탐색
 - queue로 주로 구현
 
-```
+```kotlin
 val arr: Array<IntArray>
 val check: Array<BooleanArray>
 val dy = listOf(1,-1,0,0)
