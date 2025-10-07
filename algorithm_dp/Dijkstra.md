@@ -2,9 +2,8 @@
 
 - 시작 위치로부터 최단 경로 찾는 알고리즘
 
-```
-//kotlin
-1916.kt
+```kotlin
+// 1916.kt
 
 import java.util.*
 import kotlin.math.*
