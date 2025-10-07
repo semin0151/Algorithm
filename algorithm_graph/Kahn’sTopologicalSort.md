@@ -5,7 +5,7 @@
 - 사이클 판정	모든 노드를 처리 못하면 (count < n) → 사이클 존재
 - 시간 복잡도	O(N + E)
 
-```
+```kotlin
 import java.util.ArrayDeque
 
 fun hasCycle(n: Int, edges: Array<IntArray>): Boolean {
